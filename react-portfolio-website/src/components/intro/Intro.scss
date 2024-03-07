@@ -1,0 +1,87 @@
+@import "../../global.scss";
+
+.intro{
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 70px;
+
+    // @include mobile{
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+    
+    .left{
+        flex: 0.5;
+        margin-right: 50px;
+
+        .imgContainer{
+            border-radius: 50%;
+            background-color: crimson;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: right;
+            overflow: hidden;
+            // @include mobile{
+            //     height: 50%;
+            // }
+        }
+    }
+    .right{
+        flex: 0.5;
+        .wrapper{
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            .title{
+                font-size: 40px;
+                margin: 10px 0;
+                text-transform: capitalize;
+            }
+            .pre-title{
+                font-size: 35px;
+                text-transform: capitalize;
+            }
+            .sub-title{
+                font-size: 30px;
+                text-transform: capitalize;
+                .dynamic-text{
+                    color: #dc143c;
+                    font-size: 30px;
+                    text-transform: capitalize;
+                }
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+            
+        }
+        .down-image{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            .arrow-down{
+                width: 10%;
+                animation: arrowBlink 2s infinite;
+            }
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+}

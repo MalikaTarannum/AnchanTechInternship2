@@ -1,0 +1,34 @@
+@import '../../global.scss';
+
+.menu{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $mainColor;
+    transition: all 1s ease;
+    &.active{
+        right: 0;
+    }
+    .menu-links{
+        width: 60%;
+    .items{
+        font-size: 24px;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 400;
+        &:hover{
+            font-weight: 600;
+        }
+    }
+    .menu-items:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+}
